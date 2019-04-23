@@ -1,8 +1,8 @@
 #!/bin/sh
 set -e
 
-# Perform all actions as user 'postgres'
-export PGUSER=postgres
+# Perform all actions as $POSTGRES_USER
+export PGUSER="$POSTGRES_USER"
 
 # Add pgRouting Functions to the database
 psql --dbname="$POSTGRES_DB" <<EOSQL
